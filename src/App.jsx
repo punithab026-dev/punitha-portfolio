@@ -367,7 +367,7 @@ export default function App() {
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
               <button className="btn btn-primary" onClick={() => scrollTo("projects")}>⚡ View Projects</button>
               <button className="btn btn-outline" onClick={() => scrollTo("contact")}>📬 Contact Me</button>
-              <a className="btn btn-outline" href="/resume.pdf " download="Punitha Updated Resume.pdf" >📄 Resume</a>
+              <a className="btn btn-outline" href="/resume.pdf " download=" Resume.pdf" >📄 Resume</a>
             </div>
             <div style={{ display: "flex", gap: "1rem" }}>
               {[
