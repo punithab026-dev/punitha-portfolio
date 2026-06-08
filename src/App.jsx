@@ -693,7 +693,6 @@ export default function App() {
             <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
               {[
                 { icon: "📧", label: "Email", val: "Punithab026@gmail.com", copy: true },
-                { icon: "📱", label: "Phone", val: "6379676592", copy: true },
                 { icon: "💼", label: "LinkedIn", val: "linkedin.com/in/punithab", href: "https://www.linkedin.com/in/punithab" },
                 { icon: "⚡", label: "GitHub", val: "github.com/punithab026-dev", href: "https://github.com/punithab026-dev" },
               ].map(c => (
