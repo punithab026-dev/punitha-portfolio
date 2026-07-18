@@ -831,38 +831,29 @@ function ProjectCard({ p }) {
 }
 
 // ─── ContactForm ─────────────────────────────────────────────────────────────
-function ContactForm({ onSend }) {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const inputStyle = {
-    width: "100%", padding: "0.75rem 1rem", borderRadius: "10px",
-    background: "var(--bg)", border: "1px solid var(--border)",
-    color: "var(--text)", fontSize: "0.9rem", outline: "none",
-    transition: "border-color 0.2s", marginBottom: "1rem",
-    fontFamily: "inherit",
-  };
-  const handleSubmit = () => {
-    if (!form.name || !form.email || !form.message) return;
-    onSend();
-    setForm({ name: "", email: "", message: "" });
-  };
-  return (
-    <div>
-      <input style={inputStyle} placeholder="Your Name" value={form.name}
-        onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-        onFocus={e => { e.target.style.borderColor = "var(--accent)"; }}
-        onBlur={e => { e.target.style.borderColor = "var(--border)"; }} />
-      <input style={inputStyle} placeholder="Your Email" value={form.email}
-        onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-        onFocus={e => { e.target.style.borderColor = "var(--accent)"; }}
-        onBlur={e => { e.target.style.borderColor = "var(--border)"; }} />
-      <textarea style={{ ...inputStyle, height: "120px", resize: "vertical" }}
-        placeholder="Your Message..." value={form.message}
-        onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-        onFocus={e => { e.target.style.borderColor = "var(--accent)"; }}
-        onBlur={e => { e.target.style.borderColor = "var(--border)"; }} />
-      <button className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }} onClick={handleSubmit}>
-        🚀 Send Message
-      </button>
-    </div>
-  );
-}
+<form
+action="https://formspree.io/f/YOUR_FORM_ID"
+method="POST">
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required>
+
+<textarea
+name="message"
+placeholder="Your Message"
+required></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
